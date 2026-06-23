@@ -884,6 +884,15 @@ export default function Home() {
         isOpen={isQuoteOpen}
         onClose={() => setIsQuoteOpen(false)}
       />
+
+      {/* Invisible Watermark for Authenticity Verification */}
+      <div
+        className="hidden pointer-events-none select-none opacity-0 w-0 h-0 overflow-hidden"
+        id="undefined"
+        data-watermark="undefined"
+      >
+        undefined
+      </div>
     </>
   );
 }
