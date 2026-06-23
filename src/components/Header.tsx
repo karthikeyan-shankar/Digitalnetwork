@@ -110,7 +110,7 @@ export default function Header({
                   href={link.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`text-slate-500 ${link.color} transition-colors p-1.5 rounded-lg bg-slate-50 border border-slate-200 hover:bg-slate-100`}
+                  className={`text-slate-500 ${link.color} transition-all w-8 h-8 rounded-full bg-slate-50 border border-slate-200 hover:bg-slate-100 flex items-center justify-center hover:scale-105`}
                   title={link.label}
                 >
                   {link.icon}
@@ -125,12 +125,12 @@ export default function Header({
               <Phone className="w-4 h-4 text-blue-600 animate-bounce" />
               <span>9894740202</span>
             </a>
-            <Button
+            <button
               onClick={onOpenQuote}
-              className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-5 py-2.5 rounded-full shadow-md shadow-blue-500/10 border-0 hover:scale-[1.03] transition-all"
+              className="h-11 px-6 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-full shadow-md shadow-blue-500/10 border-0 hover:scale-[1.03] transition-all flex items-center justify-center cursor-pointer outline-none text-sm"
             >
               Request Quote
-            </Button>
+            </button>
           </div>
 
           {/* Mobile Navigation Trigger */}
@@ -180,7 +180,7 @@ export default function Header({
                         href={link.href}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className={`text-slate-500 ${link.color} transition-colors p-2 rounded-lg bg-slate-50 border border-slate-200`}
+                        className={`text-slate-500 ${link.color} transition-all w-10 h-10 rounded-full bg-slate-50 border border-slate-200 flex items-center justify-center`}
                       >
                         {link.icon}
                       </a>
@@ -194,12 +194,12 @@ export default function Header({
                     <Phone className="w-5 h-5 text-blue-600" />
                     <span className="font-bold">9894740202</span>
                   </a>
-                  <Button
+                  <button
                     onClick={onOpenQuote}
-                    className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-xl shadow-md border-0"
+                    className="w-full h-12 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl shadow-md border-0 flex items-center justify-center cursor-pointer transition-colors"
                   >
                     Request Quote
-                  </Button>
+                  </button>
                 </div>
               </SheetContent>
             </Sheet>

@@ -28,47 +28,47 @@ import {
   ExternalLink,
 } from "lucide-react";
 
-// Custom SVG Brand Icons
-const AppleIcon = () => (
-  <svg className="w-6 h-6 text-slate-500 hover:text-black transition-colors" viewBox="0 0 170 170" fill="currentColor">
-    <path d="M150.37 130.25c-2.45 5.66-5.35 10.87-8.71 15.66-4.58 6.53-8.33 11.05-11.22 13.56-4.48 4.12-9.28 6.23-14.42 6.35-3.69 0-8.14-1.05-13.32-3.18-5.19-2.12-9.97-3.17-14.34-3.17-4.58 0-9.49 1.05-14.75 3.17-5.26 2.13-9.5 3.24-12.74 3.35-4.34.13-9.13-1.92-14.37-6.13-3.18-2.58-6.97-7.14-11.34-13.7-4.74-7.07-8.71-15.66-11.9-25.75-3.19-10.1-4.78-19.78-4.78-29.04 0-14.93 3.66-26.96 10.99-36.08 7.33-9.12 16.53-13.73 27.6-13.85 6.02 0 12.33 1.77 18.91 5.31 6.58 3.53 11.29 5.3 14.15 5.3 2.5 0 7-1.7 13.48-5.12 6.5-3.41 12.38-5.06 17.65-4.94 13.06.31 23.33 5.08 30.82 14.3 7.49 9.22 10.88 20.35 10.17 33.42-3.07 12.33-10.36 21.65-21.87 27.97 3.07 10.87 8.99 21.63 17.75 32.26 2.45 2.87 4.19 4.79 5.22 5.77l.03.03zM119.22 26.24c0-7.33 2.65-14.28 7.95-20.87 3.82-4.74 8.76-7.79 14.83-9.15.15 1.15.22 2.13.22 2.94 0 7.15-2.73 14.07-8.18 20.73-4.52 5.39-9.84 8.64-15.96 9.77-.57-2.33-.86-4.47-.86-6.42z" />
+// Official brand vector SVG components
+const AppleIcon = ({ className = "" }: { className?: string }) => (
+  <svg className={className} role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+    <title>Apple</title>
+    <path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/>
   </svg>
 );
 
-const HPIcon = () => (
-  <svg className="w-8 h-8 text-slate-500 hover:text-blue-600 transition-colors" viewBox="0 0 100 100" fill="currentColor">
-    <circle cx="50" cy="50" r="48" fill="none" stroke="currentColor" strokeWidth="4" />
-    <path d="M40 30 v40 h8 v-15 h10 c8 0 14-4 14-12 s-6-13 -14-13 H40 z M48 37 h8 c4 0 7 2 7 6 s-3 6 -7 6 h-8 V37 z" />
+const HPIcon = ({ className = "" }: { className?: string }) => (
+  <svg className={className} role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+    <title>HP</title>
+    <path d="M12.0069 24h-.3572l2.459-6.7453h3.3796c.5907 0 1.2364-.4533 1.4424-1.0166l2.6652-7.3085c.4396-1.1952-.2473-2.1706-1.525-2.1706h-4.6983l-3.929 10.798-2.2255 6.127C3.929 22.434 0 17.6806 0 12.007 0 6.498 3.7092 1.8546 8.7647.4396L6.4705 6.759 2.6514 17.2547h2.5415L8.4488 8.339h1.9095l-3.2558 8.9158H9.644l3.0223-8.3251c.4396-1.1952-.2473-2.1706-1.525-2.1706h-2.143l2.459-6.7453C11.636 0 11.8145 0 11.9931 0 18.6285 0 24 5.3715 24 12.007c.0137 6.6216-5.3578 11.993-11.9931 11.993zM19.2742 8.325h-1.9096l-2.6789 7.336h1.9096l2.6789-7.336z"/>
   </svg>
 );
 
-const DellIcon = () => (
-  <svg className="w-8 h-8 text-slate-500 hover:text-blue-500 transition-colors" viewBox="0 0 100 100" fill="currentColor">
-    <circle cx="50" cy="50" r="48" fill="none" stroke="currentColor" strokeWidth="4" />
-    {/* Dell tilted wordmark letters */}
-    <path d="M22 38h10c5 0 8 3 8 7s-3 7-8 7H26v10h-4V38zm4 10h6c2 0 4-1 4-3s-2-3-4-3h-6v6z" />
-    <path d="M46 38h10v4h-6v4h5v4h-5v4h6v4H46V38z" />
-    <path d="M62 38h4v20h6v4h-10V38z" />
-    <path d="M76 38h4v20h6v4h-10V38z" />
+const DellIcon = ({ className = "" }: { className?: string }) => (
+  <svg className={className} role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+    <title>Dell</title>
+    <path d="M17.963 14.6V9.324h1.222v4.204h2.14v1.07h-3.362zm-9.784-3.288l2.98-2.292c.281.228.56.458.841.687l-2.827 2.14.611.535 2.827-2.216c.281.228.56.458.841.688a295.83 295.83 0 0 1-2.827 2.216l.61.536 2.83-2.295-.001-1.986h1.223v4.204h2.216v1.07h-3.362v-1.987c-.995.763-1.987 1.529-2.981 2.292l-2.981-2.292c-.144.729-.653 1.36-1.312 1.694-.285.147-.597.24-.915.276-.183.022-.367.017-.551.017H3.516V9.325H5.69a2.544 2.544 0 0 1 1.563.557c.454.36.778.872.927 1.43m-3.516-.917v3.21l.953-.001a1.377 1.377 0 0 0 1.036-.523 1.74 1.74 0 0 0 .182-1.889 1.494 1.494 0 0 0-.976-.766c-.166-.04-.338-.03-.507-.032h-.688zM11.82 0h.337a11.94 11.94 0 0 1 5.405 1.373 12.101 12.101 0 0 1 4.126 3.557A11.93 11.93 0 0 1 24 11.82v.36a11.963 11.963 0 0 1-3.236 8.033A11.967 11.967 0 0 1 12.182 24h-.361a11.993 11.993 0 0 1-4.145-.806 12.04 12.04 0 0 1-4.274-2.836A12.057 12.057 0 0 1 .576 15.67 12.006 12.006 0 0 1 0 12.181v-.361a11.924 11.924 0 0 1 1.992-6.396 12.211 12.211 0 0 1 4.71-4.172A11.875 11.875 0 0 1 11.82 0m-.153 1.23a10.724 10.724 0 0 0-6.43 2.375 10.78 10.78 0 0 0-3.319 4.573 10.858 10.858 0 0 0 .193 8.12 10.788 10.788 0 0 0 3.546 4.421 10.698 10.698 0 0 0 4.786 1.946c1.456.209 2.955.124 4.376-.26a10.756 10.756 0 0 0 5.075-3.062 10.742 10.742 0 0 0 2.686-5.28 10.915 10.915 0 0 0-.122-4.682 10.77 10.77 0 0 0-7.098-7.626 10.78 10.78 0 0 0-3.693-.525z"/>
   </svg>
 );
 
-const AsusIcon = () => (
-  <span className="text-xl font-black tracking-[0.25em] text-slate-500 hover:text-blue-600 transition-colors font-mono">
-    ASUS
-  </span>
+const AsusIcon = ({ className = "" }: { className?: string }) => (
+  <svg className={className} role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+    <title>ASUS</title>
+    <path d="M23.904 10.788V9.522h-4.656c-.972 0-1.41.6-1.482 1.182v.018-1.2h-1.368v1.266h1.362zm-6.144.456l-1.368-.078v1.458c0 .456-.228.594-1.02.594H14.28c-.654 0-.93-.186-.93-.594v-1.596l-1.386-.102v1.812h-.03c-.078-.528-.276-1.14-1.596-1.23L6 11.22c0 .666.474 1.062 1.218 1.14l3.024.306c.24.018.414.09.414.288 0 .216-.18.24-.456.24H5.946V11.22l-1.386-.09v3.348h5.646c1.26 0 1.662-.654 1.722-1.2h.03c.156.864.912 1.2 2.19 1.2h1.41c1.494 0 2.202-.456 2.202-1.524zm4.398.258l-4.338-.258c0 .666.438 1.11 1.182 1.17l3.09.24c.24.018.384.078.384.276 0 .186-.168.258-.516.258h-4.212v1.29h4.302c1.356 0 1.95-.474 1.95-1.554 0-.972-.534-1.338-1.842-1.422zm-10.194-1.98h1.386v1.266h-1.386zM3.798 11.07l-1.506-.15L0 14.478h1.686zm7.914-1.548h-4.23c-.984 0-1.416.612-1.518 1.2v-1.2H3.618c-.33 0-.486.102-.642.33l-.648.936h9.384Z"/>
+  </svg>
 );
 
-const LenovoIcon = () => (
-  <span className="text-lg font-bold tracking-tight text-slate-500 hover:text-red-600 transition-colors font-sans">
-    lenovo
-  </span>
+const LenovoIcon = ({ className = "" }: { className?: string }) => (
+  <svg className={className} role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+    <title>Lenovo</title>
+    <path d="M21.044 12.288c0 .5-.343.867-.815.867-.464 0-.827-.38-.827-.867 0-.51.343-.868.815-.868.464 0 .827.381.827.868zm-14.305-.92a.787.787 0 0 0-.651.307.991.991 0 0 0-.172.738l1.479-.614a.708.708 0 0 0-.656-.43zm6.963.052c-.472 0-.816.358-.816.868 0 .486.364.867.828.867.472 0 .815-.368.815-.867 0-.487-.363-.868-.827-.868zM24 7.997v8.006H0V7.997h24zM5.01 13.05H3.088V9.825H2.23v4.003h2.78v-.777zm1.137-.094l2.163-.897a1.667 1.667 0 0 0-.37-.86c-.284-.33-.704-.505-1.216-.505-.931 0-1.633.686-1.633 1.593 0 .93.704 1.593 1.726 1.593.572 0 1.158-.272 1.432-.589l-.535-.411c-.357.264-.56.326-.885.326-.292 0-.52-.09-.682-.25zm5.57-1.039c0-.709-.507-1.223-1.252-1.223a1.28 1.28 0 0 0-1.005.494v-.442h-.846v3.081h.846v-1.753c0-.316.245-.651.698-.651.35 0 .712.243.712.651v1.753h.847v-1.91zm3.647.37c0-.904-.725-1.593-1.65-1.593-.933 0-1.663.7-1.663 1.593 0 .903.726 1.592 1.651 1.592.932 0 1.662-.7 1.662-1.592zm2.066 1.54l1.268-3.081h-.967l-.765 2.099-.765-2.1h-.966l1.268 3.081h.927zm4.449-1.54c0-.904-.725-1.593-1.65-1.593-.932 0-1.662-.7 1.662-1.593 0 .903.725 1.592 1.65 1.592.932 0 1.662-.7 1.662-1.592z"/>
+  </svg>
 );
 
-const AcerIcon = () => (
-  <span className="text-lg font-semibold italic text-slate-500 hover:text-green-600 transition-colors font-sans">
-    acer
-  </span>
+const AcerIcon = ({ className = "" }: { className?: string }) => (
+  <svg className={className} role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+    <title>Acer</title>
+    <path d="M23.943 9.364c-.085-.113-.17-.198-.595-.226-.113 0-.453-.029-1.048-.029-1.56 0-2.636.482-3.175 1.417.142-.935-.765-1.417-2.749-1.417-2.324 0-3.798.935-4.393 2.834-.226.709-.226 1.276-.056 1.73h-.567c-.425.027-.992.056-1.36.056-.85 0-1.39-.142-1.588-.425-.17-.255-.17-.737.057-1.446.368-1.162 1.247-1.672 2.664-1.672.737 0 1.445.085 1.445.085.085 0 .142-.113.142-.198l-.028-.085-.057-.397c-.028-.255-.227-.397-.567-.453-.311-.029-.567-.029-.907-.029h-.028c-1.842 0-3.146.624-3.854 1.814.255-1.219-.596-1.814-2.551-1.814-1.105 0-1.9.029-2.353.085-.368.057-.595.199-.68.454l-.17.51c-.028.085.029.142.142.142.085 0 .425-.057.992-.086a24.816 24.816 0 0 1 1.672-.085c1.077 0 1.559.284 1.389.822-.029.114-.114.199-.255.227-1.02.17-1.842.284-2.438.369-1.7.226-2.692.736-2.947 1.587-.369 1.162.538 1.728 2.72 1.728 1.078 0 2.013-.056 2.75-.198.425-.085.652-.17.737-.453l.396-1.304c-.028 1.304.85 1.955 2.721 1.955.794 0 1.559-.028 1.927-.085.369-.056.567-.141.652-.425l.085-.396c.397.623 1.276.935 2.608.935 1.417 0 2.239-.029 2.465-.114a.523.523 0 0 0 .369-.311l.028-.085.17-.539c.029-.085-.028-.142-.142-.142l-.906.057c-.596.029-1.077.057-1.418.057-.651 0-1.076-.057-1.332-.142-.368-.142-.538-.397-.51-.822l2.863-.368c1.275-.17 2.154-.567 2.579-1.19l-.992 3.315c-.028.057 0 .114.028.142.029.028.085.057.199.057h1.19c.198 0 .283-.114.312-.199l1.048-3.656c.142-.481.567-.708 1.36-.708.71 0 1.22 0 1.56.028h.028c.057 0 .17-.028.255-.17l.17-.51c0-.085 0-.17-.057-.227zM4.841 13.73c-.368.057-.907.085-1.587.085-1.219 0-1.729-.255-1.587-.737.113-.34.425-.567.935-.624l2.75-.368zm12.669-2.95c-.114.369-.652.624-1.616.766l-2.295.311.056-.198c.199-.624.454-1.02.794-1.247.34-.227.907-.34 1.7-.34 1.05.028 1.503.255 1.36.708Z"/>
+  </svg>
 );
 
 const FacebookIcon = ({ className = "" }: { className?: string }) => (
@@ -204,27 +204,31 @@ export default function Home() {
                   <span>18+ Years of Trusted Support in Karur</span>
                 </div>
 
-                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight text-slate-900">
-                  Next-Gen IT Infrastructure &{" "}
-                  <span className="text-blue-650 glow-text">
+                <h1 className="text-4xl sm:text-5xl lg:text-[54px] lg:leading-[1.15] font-black tracking-tight text-slate-900">
+                  Next-Gen IT
+                  <br />
+                  Infrastructure &
+                  <br />
+                  <span className="text-blue-600">
                     Multi-Brand Sales
                   </span>
                 </h1>
 
-                <p className="text-lg text-slate-600 max-w-xl mx-auto lg:mx-0 leading-relaxed">
+                <p className="text-base sm:text-lg text-slate-655 max-w-xl mx-auto lg:mx-0 leading-relaxed">
                   We supply premium desktops, laptops, servers, printer units, firewalls, and networking accessories. Backed by 18 years of immediate, on-site troubleshooting.
                 </p>
 
+                {/* Same-size buttons aligned next to each other */}
                 <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
-                  <Button
+                  <button
                     onClick={() => handleOpenQuote()}
-                    className="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white font-bold px-8 py-3 rounded-full text-base border-0 shadow-lg shadow-blue-500/10 transition-transform hover:scale-[1.02]"
+                    className="w-full sm:w-auto sm:min-w-[185px] h-12 bg-blue-650 hover:bg-blue-700 text-white font-bold rounded-full text-sm sm:text-base border-0 shadow-lg shadow-blue-500/20 hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center justify-center cursor-pointer outline-none"
                   >
                     Request Callback
-                  </Button>
+                  </button>
                   <a
                     href="#products"
-                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2 text-slate-700 hover:text-slate-900 bg-slate-50 hover:bg-slate-100 border border-slate-200 font-bold px-8 py-3 rounded-full text-base transition-all shadow-sm"
+                    className="w-full sm:w-auto sm:min-w-[185px] h-12 bg-slate-100 hover:bg-slate-200/80 text-slate-700 hover:text-slate-900 font-bold rounded-full text-sm sm:text-base border-0 shadow-sm hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center justify-center gap-1.5 cursor-pointer outline-none"
                   >
                     <span>Explore Products</span>
                     <ChevronRight className="w-4 h-4" />
@@ -254,46 +258,46 @@ export default function Home() {
                   {/* Decorative glow box */}
                   <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 to-cyan-400 rounded-2xl blur-md opacity-20" />
                   
-                  {/* Business Card content - keep it dark to provide beautiful contrast */}
-                  <div className="relative bg-slate-900 border border-slate-800 rounded-2xl p-6 sm:p-8 space-y-6 shadow-2xl text-white">
-                    <div className="flex items-center justify-between border-b border-slate-800 pb-4">
+                  {/* Business Card content - matches the light mode card in the screenshot */}
+                  <div className="relative bg-white border border-slate-200 rounded-2xl p-6 sm:p-8 space-y-6 shadow-xl text-slate-900">
+                    <div className="flex items-center justify-between border-b border-slate-100 pb-4">
                       <div>
-                        <h4 className="text-sm font-bold text-slate-400">FOUNDER & LEAD ENGINEER</h4>
-                        <h3 className="text-xl font-extrabold text-white tracking-tight">Surya</h3>
+                        <h4 className="text-[10px] font-bold text-slate-400 tracking-wider">FOUNDER & LEAD ENGINEER</h4>
+                        <h3 className="text-xl font-extrabold text-slate-900 tracking-tight">Surya</h3>
                       </div>
-                      <div className="bg-blue-600/20 border border-blue-500/30 text-blue-400 text-xs px-2.5 py-1 rounded-full font-bold">
+                      <div className="bg-blue-50/50 border border-blue-200 text-blue-600 text-xs px-3 py-1 rounded-full font-bold">
                         BNI Karur
                       </div>
                     </div>
 
-                    <div className="space-y-4 text-sm text-slate-300">
+                    <div className="space-y-4 text-sm text-slate-650">
                       <div className="flex items-start gap-3">
-                        <CheckCircle2 className="w-5 h-5 text-blue-400 flex-shrink-0 mt-0.5" />
+                        <CheckCircle2 className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
                         <p>18 Years experience delivering custom business desktop systems.</p>
                       </div>
                       <div className="flex items-start gap-3">
-                        <CheckCircle2 className="w-5 h-5 text-blue-400 flex-shrink-0 mt-0.5" />
+                        <CheckCircle2 className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
                         <p>Immediate daily support - solving customer repairs instantly.</p>
                       </div>
                       <div className="flex items-start gap-3">
-                        <CheckCircle2 className="w-5 h-5 text-blue-400 flex-shrink-0 mt-0.5" />
+                        <CheckCircle2 className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
                         <p>Ideal Partner for textile factories, educational centers, exports & coaches.</p>
                       </div>
                     </div>
 
-                    <div className="pt-4 border-t border-slate-800 flex flex-col gap-2">
+                    <div className="pt-4 border-t border-slate-100 flex flex-col gap-2.5">
                       <a
                         href="tel:9894740202"
-                        className="flex items-center gap-3 bg-slate-950 hover:bg-slate-850 border border-slate-800 px-4 py-2.5 rounded-xl transition-colors text-sm font-semibold justify-center"
+                        className="flex items-center gap-3 bg-slate-50 hover:bg-slate-100 border border-slate-250 px-4 h-12 rounded-full transition-all text-sm font-semibold justify-center text-slate-700 hover:text-slate-900 cursor-pointer shadow-sm"
                       >
-                        <Phone className="w-4 h-4 text-blue-500" />
+                        <Phone className="w-4 h-4 text-blue-600" />
                         <span>Call Surya: 9894740202</span>
                       </a>
                       <a
                         href="https://wa.me/919894740202"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white font-semibold py-2.5 rounded-xl transition-colors text-sm"
+                        className="flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white font-bold h-12 rounded-full transition-all text-sm shadow-md shadow-green-500/10 hover:scale-[1.02] active:scale-[0.98] cursor-pointer"
                       >
                         <span>Chat on WhatsApp</span>
                       </a>
@@ -329,19 +333,77 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Section 3: Brand Showcase */}
-        <section className="bg-white py-12 border-b border-slate-100">
+        {/* Section 3: Brand Showcase (Exact logo cards layout from screenshot) */}
+        <section className="bg-white py-16 border-b border-slate-100">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <p className="text-center text-xs font-bold text-slate-400 uppercase tracking-widest mb-8">
-              Supporting Premium Multi-Brand Solutions
-            </p>
-            <div className="flex flex-wrap items-center justify-center gap-x-16 gap-y-8">
-              <AppleIcon />
-              <HPIcon />
-              <DellIcon />
-              <AsusIcon />
-              <LenovoIcon />
-              <AcerIcon />
+            <div className="text-center max-w-2xl mx-auto mb-12 space-y-2">
+              <span className="text-xs font-bold uppercase tracking-widest text-blue-600">
+                OUR PARTNERS
+              </span>
+              <h2 className="text-3xl font-extrabold text-slate-900 tracking-tight">
+                Supporting Premium Multi-Brand Solutions
+              </h2>
+              <p className="text-sm text-slate-500">
+                Authorized partner and distributor for leading global IT hardware manufacturers
+              </p>
+            </div>
+
+            <div className="grid grid-cols-2 md:grid-cols-6 gap-6 items-stretch">
+              
+              {/* Apple Card */}
+              <div className="bg-black border border-slate-900 rounded-3xl p-6 flex flex-col items-center justify-between text-center min-h-[175px] shadow-sm hover:scale-[1.03] transition-all duration-300">
+                <AppleIcon className="w-12 h-12 text-slate-200" />
+                <div className="mt-4">
+                  <h4 className="text-xs font-bold uppercase tracking-wider text-white">APPLE</h4>
+                  <p className="text-[10px] text-slate-500 mt-1">Authorized Partner</p>
+                </div>
+              </div>
+
+              {/* HP Card */}
+              <div className="bg-black border border-slate-900 rounded-3xl p-6 flex flex-col items-center justify-between text-center min-h-[175px] shadow-sm hover:scale-[1.03] transition-all duration-300">
+                <HPIcon className="w-12 h-12 text-white" />
+                <div className="mt-4">
+                  <h4 className="text-xs font-bold uppercase tracking-wider text-white">HP</h4>
+                  <p className="text-[10px] text-slate-500 mt-1">Authorized Partner</p>
+                </div>
+              </div>
+
+              {/* Dell Card (Highlighted) */}
+              <div className="bg-white border-2 border-blue-500 rounded-3xl p-6 flex flex-col items-center justify-between text-center min-h-[175px] shadow-md hover:scale-[1.03] transition-all duration-300">
+                <DellIcon className="w-12 h-12 text-blue-600" />
+                <div className="mt-4">
+                  <h4 className="text-xs font-bold uppercase tracking-wider text-slate-900">DELL</h4>
+                  <p className="text-[10px] text-slate-500 mt-1">Authorized Partner</p>
+                </div>
+              </div>
+
+              {/* Asus Card */}
+              <div className="bg-slate-950 border border-slate-900 rounded-3xl p-6 flex flex-col items-center justify-between text-center min-h-[175px] shadow-sm hover:scale-[1.03] transition-all duration-300">
+                <AsusIcon className="w-16 h-12 text-white mt-1" />
+                <div className="mt-4">
+                  <h4 className="text-xs font-bold uppercase tracking-wider text-white">ASUS</h4>
+                  <p className="text-[10px] text-slate-500 mt-1">Authorized Partner</p>
+                </div>
+              </div>
+
+              {/* Lenovo Card */}
+              <div className="bg-white border border-slate-200 rounded-3xl p-6 flex flex-col items-center justify-between text-center min-h-[175px] shadow-sm hover:scale-[1.03] transition-all duration-300 hover:border-slate-300">
+                <LenovoIcon className="w-16 h-12 text-blue-600 mt-1" />
+                <div className="mt-4">
+                  <h4 className="text-xs font-bold uppercase tracking-wider text-slate-900">LENOVO</h4>
+                  <p className="text-[10px] text-slate-500 mt-1">Authorized Partner</p>
+                </div>
+              </div>
+
+              {/* Acer Card */}
+              <div className="bg-white border border-slate-200 rounded-3xl p-6 flex flex-col items-center justify-between text-center min-h-[175px] shadow-sm hover:scale-[1.03] transition-all duration-300 hover:border-slate-300">
+                <AcerIcon className="w-16 h-12 text-green-600 mt-1" />
+                <div className="mt-4">
+                  <h4 className="text-xs font-bold uppercase tracking-wider text-slate-900">ACER</h4>
+                  <p className="text-[10px] text-slate-500 mt-1">Authorized Partner</p>
+                </div>
+              </div>
+
             </div>
           </div>
         </section>
@@ -413,7 +475,7 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* Right Column: Vision & Ambition Card (Keep dark as premium card accent) */}
+              {/* Right Column: Vision & Ambition Card */}
               <div className="lg:col-span-5">
                 <div className="relative">
                   <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-2xl blur opacity-15" />
@@ -528,12 +590,12 @@ export default function Home() {
                         </div>
 
                         <div className="pt-6">
-                          <Button
+                          <button
                             onClick={() => handleOpenQuote(prod.name)}
-                            className="w-full bg-slate-50 hover:bg-slate-100 border border-slate-200 text-slate-700 hover:text-slate-900 rounded-xl py-2.5 text-xs font-semibold"
+                            className="w-full h-10 bg-slate-50 hover:bg-slate-100 border border-slate-200 text-slate-700 hover:text-slate-900 rounded-xl text-xs font-semibold flex items-center justify-center cursor-pointer transition-colors"
                           >
                             Inquire Now
-                          </Button>
+                          </button>
                         </div>
                       </div>
                     ))}
@@ -623,7 +685,7 @@ export default function Home() {
                 <h3 className="text-3xl sm:text-4xl font-black text-slate-900 leading-tight">
                   Building High-Trust Relationships in Karur
                 </h3>
-                <p className="text-sm text-slate-650 leading-relaxed">
+                <p className="text-sm text-slate-655 leading-relaxed">
                   As an active member of BNI, Surya is committed to professional business ethics, punctuality, and verified quality standards. We believe in helping our business community thrive through reliable technology infrastructure.
                 </p>
 
@@ -781,12 +843,12 @@ export default function Home() {
                 </div>
 
                 {/* CTA Action Button */}
-                <Button
+                <button
                   onClick={() => handleOpenQuote()}
-                  className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 rounded-2xl border-0 shadow-md shadow-blue-500/10 text-base transition-transform hover:scale-[1.01]"
+                  className="w-full h-14 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-2xl border-0 shadow-lg shadow-blue-500/20 hover:scale-[1.01] transition-all flex items-center justify-center cursor-pointer outline-none"
                 >
                   Schedule a Visit / Get Quote
-                </Button>
+                </button>
 
               </div>
             </div>

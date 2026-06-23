@@ -217,12 +217,12 @@ Sent from digitnt.com`;
                 />
               </div>
 
-              <Button
+              <button
                 type="submit"
-                className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 rounded-xl border-0 shadow-lg shadow-blue-500/20 hover:scale-[1.01] transition-all"
+                className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 rounded-xl border-0 shadow-lg shadow-blue-500/20 hover:scale-[1.01] transition-all flex items-center justify-center cursor-pointer outline-none"
               >
                 Submit Inquiry
-              </Button>
+              </button>
             </form>
           </>
         ) : (
