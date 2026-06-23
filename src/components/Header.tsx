@@ -75,7 +75,7 @@ export default function Header({
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-slate-950/80 backdrop-blur-md border-b border-slate-800 py-3 shadow-lg"
+          ? "bg-white/90 backdrop-blur-md border-b border-slate-200 py-3 shadow-sm"
           : "bg-transparent py-5"
       }`}
     >
@@ -92,10 +92,10 @@ export default function Header({
               <a
                 key={item.label}
                 href={item.href}
-                className="text-sm font-medium text-slate-300 hover:text-blue-400 transition-colors relative group py-2"
+                className="text-sm font-semibold text-slate-700 hover:text-blue-650 transition-colors relative group py-2"
               >
                 {item.label}
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-500 transition-all duration-300 group-hover:w-full" />
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full" />
               </a>
             ))}
           </nav>
@@ -103,14 +103,14 @@ export default function Header({
           {/* Action Buttons */}
           <div className="hidden md:flex items-center gap-4">
             {/* Social Links */}
-            <div className="flex items-center gap-2 border-r border-slate-800 pr-4 mr-2">
+            <div className="flex items-center gap-2 border-r border-slate-200 pr-4 mr-2">
               {socialLinks.map((link) => (
                 <a
                   key={link.label}
                   href={link.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`text-slate-400 ${link.color} transition-colors p-1.5 rounded-lg bg-slate-900 border border-slate-850 hover:bg-slate-850`}
+                  className={`text-slate-500 ${link.color} transition-colors p-1.5 rounded-lg bg-slate-50 border border-slate-200 hover:bg-slate-100`}
                   title={link.label}
                 >
                   {link.icon}
@@ -120,14 +120,14 @@ export default function Header({
 
             <a
               href="tel:9894740202"
-              className="flex items-center gap-2 text-sm font-semibold text-slate-300 hover:text-blue-400 transition-colors"
+              className="flex items-center gap-2 text-sm font-bold text-slate-700 hover:text-blue-600 transition-colors"
             >
-              <Phone className="w-4 h-4 text-blue-500 animate-bounce" />
+              <Phone className="w-4 h-4 text-blue-600 animate-bounce" />
               <span>9894740202</span>
             </a>
             <Button
               onClick={onOpenQuote}
-              className="bg-blue-600 hover:bg-blue-700 text-white font-medium px-5 py-2.5 rounded-full shadow-lg shadow-blue-500/25 border-0 hover:scale-[1.03] transition-all"
+              className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-5 py-2.5 rounded-full shadow-md shadow-blue-500/10 border-0 hover:scale-[1.03] transition-all"
             >
               Request Quote
             </Button>
@@ -137,26 +137,26 @@ export default function Header({
           <div className="md:hidden flex items-center gap-3">
             <a
               href="tel:9894740202"
-              className="p-2 text-slate-300 hover:text-blue-400"
+              className="p-2 text-slate-655 hover:text-blue-600"
               aria-label="Call Business"
             >
-              <Phone className="w-5 h-5 text-blue-500" />
+              <Phone className="w-5 h-5 text-blue-600" />
             </a>
 
             <Sheet>
               <SheetTrigger
                 render={
-                  <button className="p-2 text-slate-300 hover:text-blue-400 focus:outline-none">
+                  <button className="p-2 text-slate-700 hover:text-blue-600 focus:outline-none">
                     <Menu className="w-6 h-6" />
                   </button>
                 }
               />
               <SheetContent
                 side="right"
-                className="w-[280px] bg-slate-950 border-slate-800 p-6 flex flex-col gap-8 text-white"
+                className="w-[280px] bg-white border-slate-200 p-6 flex flex-col gap-8 text-slate-900"
               >
-                <div className="flex items-center justify-between border-b border-slate-800 pb-4">
-                  <SheetTitle className="text-left font-bold text-white text-lg">
+                <div className="flex items-center justify-between border-b border-slate-100 pb-4">
+                  <SheetTitle className="text-left font-bold text-slate-950 text-lg">
                     MENU
                   </SheetTitle>
                 </div>
@@ -165,7 +165,7 @@ export default function Header({
                     <a
                       key={item.label}
                       href={item.href}
-                      className="text-lg font-medium text-slate-300 hover:text-blue-400 transition-colors border-b border-slate-900 pb-2"
+                      className="text-lg font-semibold text-slate-750 hover:text-blue-600 transition-colors border-b border-slate-100 pb-2"
                     >
                       {item.label}
                     </a>
@@ -173,14 +173,14 @@ export default function Header({
                 </nav>
                 <div className="mt-auto flex flex-col gap-4">
                   {/* Social links mobile */}
-                  <div className="flex items-center gap-3 justify-center mb-2 pb-4 border-b border-slate-900">
+                  <div className="flex items-center gap-3 justify-center mb-2 pb-4 border-b border-slate-100">
                     {socialLinks.map((link) => (
                       <a
                         key={link.label}
                         href={link.href}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className={`text-slate-400 ${link.color} transition-colors p-2 rounded-lg bg-slate-900 border border-slate-850`}
+                        className={`text-slate-500 ${link.color} transition-colors p-2 rounded-lg bg-slate-50 border border-slate-200`}
                       >
                         {link.icon}
                       </a>
@@ -189,14 +189,14 @@ export default function Header({
 
                   <a
                     href="tel:9894740202"
-                    className="flex items-center gap-3 text-slate-300 hover:text-blue-400 py-2 justify-center"
+                    className="flex items-center gap-3 text-slate-700 hover:text-blue-600 py-2 justify-center"
                   >
-                    <Phone className="w-5 h-5 text-blue-500" />
-                    <span className="font-semibold">9894740202</span>
+                    <Phone className="w-5 h-5 text-blue-600" />
+                    <span className="font-bold">9894740202</span>
                   </a>
                   <Button
                     onClick={onOpenQuote}
-                    className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-xl shadow-lg shadow-blue-500/20 border-0"
+                    className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-xl shadow-md border-0"
                   >
                     Request Quote
                   </Button>
